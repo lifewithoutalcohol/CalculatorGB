@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>CalculatorGB</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="schedule">
+                <div class="schedule__storage">
+                    <div class="schedule__input">
+                        <label for="storage__number">Storage:</label>
+                        <input type="number" id="storage__number" min="0" max="1000" value="300">
+                    </div>
+                    <div class="schedule__range">
+                        <input type="range" id="storage__scale" value="" min="0" max="1000">
+                    </div>
+                </div>
+                <div class="schedule__transfer">
+                    <div class="schedule__input">
+                        <label for="transfer__number">Transfer:</label>
+                        <input type="number" id="transfer__number" min="0" max="1000" value="300">
+                    </div>
+                    <div class="schedule__range">
+                        <input type="range" id="transfer__scale" value="" min="0" max="1000">
+                    </div>
+                </div>
+            </div>
+            <div class="logic">
+                <div class="logic__params">
+                    <div class="params__item">
+                        <div class="params__name">
+                            <p>backblaze</p>
+                        </div>
+                        <div class="params__icon">
+                            <img alt="" src=""> icon
+                        </div>
+                    </div>
+                    <div class="params__item">
+                        <div class="params__name">
+                            <p>bunny</p>
+                            <div class="logic__input">
+                                <div class="logic__input-item">
+                                    <input type="radio" name="hddssd" id="hdd" value="hdd">
+                                    <label for="hdd">HDD</label>
+                                </div>
+                                <div class="logic__input-item">
+                                    <input checked type="radio" name="hddssd" id="ssd" value="ssd">
+                                    <label for="ssd">SSD</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="params__icon">
+                            <img alt="" src=""> icon
+                        </div>
+                    </div>
+                    <div class="params__item">
+                        <div class="params__name">
+                            <p>scaleway</p>
+                            <div class="logic__input">
+                                <div class="logic__input-item">
+                                    <input checked type="radio" name="multisingle" id="multi" value="multi">
+                                    <label for="multi">Multi</label>
+                                </div>
+                                <div class="logic__input-item">
+                                    <input type="radio" name="multisingle" id="single" value="single">
+                                    <label for="single">Single</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="params__icon">
+                            <img alt="" src=""> icon
+                        </div>
+                    </div>
+                    <div class="params__item">
+                        <div class="params__name">
+                            <p>vultr</p>
+                        </div>
+                        <div class="params__icon">
+                            <img alt="" src=""> icon
+                        </div>
+                    </div>
+                </div>
+                <div class="logic__scale">
+                    <div id="backblaze__item" class="scale__item" >
+                        <div class="scale__value"></div>
+                        <div class="scale__price"></div>
+                    </div>
+                    <div id="bunny__item" class="scale__item" >
+                        <div class="scale__value"></div>
+                        <div class="scale__price"></div>
+                    </div>
+                    <div id="scaleway__item" class="scale__item" >
+                        <div class="scale__value"></div>
+                        <div class="scale__price"></div>
+                    </div>
+                    <div id="vultr__item" class="scale__item" >
+                        <div class="scale__value"></div>
+                        <div class="scale__price"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js">
+
+    </script>
+</body>
+</html>

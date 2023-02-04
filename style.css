@@ -1,0 +1,214 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    min-height: 100vh;
+    padding: 30px;
+}
+.container {
+    margin: auto;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 50vh;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.schedule {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+.schedule__storage,
+.schedule__transfer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 35%;
+    padding-top: 10px;
+}
+.schedule__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+}
+.schedule__input::after {
+    content: "GB";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    padding: 5px;
+    transform: translate( 0, -50%);
+}
+.schedule__range {
+    width: 100%;
+    position: relative;
+}
+.schedule__range::before,
+.schedule__range::after {
+    position: absolute;
+    top: 100%;
+}
+.schedule__range::before {
+    content: '0';
+    transform: translate(-50%);
+    left: 0;
+}
+.schedule__range::after {
+    content: '1000';
+    transform: translate(50%);
+    right: 0;
+}
+.schedule__input label,
+.schedule__input input {
+    display: inline-block;
+}
+#storage__number,
+#transfer__number {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 0;
+    background: #f8f8f8;
+    border: 1px solid #d5cece;
+    font-size: 16px;
+    margin-right: 45px;
+}
+#storage__scale,
+#transfer__scale {
+    width: 100%;
+}
+.logic {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 10px;
+}
+.logic__params {
+    flex: 1 1 33.33%;
+    display: flex;
+    flex-direction: column;
+}
+.params__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    flex: 1 1 25%;
+}
+.logic__input {
+    display: flex;
+    flex-wrap: wrap;
+}
+.logic__input-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.params__icon {
+    border: 3px solid black;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0;
+}
+.params__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.logic__scale {
+    flex: 1 1 66.66%;
+    border-left: 5px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.scale__item {
+    flex: 1 1 25%;
+    display: flex;
+    align-items: center;
+}
+.scale__value {
+    border: 1px solid black;
+    height: 20px;
+}
+.scale__price {
+    width: 50px;
+    text-align: center;
+}
+@media (max-width: 767.98px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .schedule {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    .schedule__storage,
+    .schedule__transfer {
+        width: 80%;
+    }
+    #storage__scale,
+    #transfer__scale {
+        width: 100%;
+    }
+    .logic {
+        flex-direction: column-reverse;
+    }
+    .logic__params {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .logic__scale {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        border-left: none;
+        border-bottom: 5px solid black;
+        padding-top: 40px;
+    }
+    .params__item {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+    .params__name {
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+    .scale__item {
+        flex-direction: column-reverse;
+    }
+    .scale__value {
+        border: 1px solid black;
+        width: 20px;
+    }
+    .scale__price {
+        transform: rotate(-90deg) translate(50%, 0);
+    }
+}
+@media (max-width: 610.98px) {
+    .logic__input {
+        flex-direction: column;
+    }
+}
